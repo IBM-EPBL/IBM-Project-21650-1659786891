@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Matching Donors</title>
+</head>
+
+<body>
+    {{ msg }}
+
+    <table border=1>
+        <thead>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Blood group</td>
+            <td>Password</td>
+
+
+
+        </thead>
+        {% for row in users %}
+        <tr>
+            <td>{{row["USERNAME"]}}</td>
+            <td> {{ row["EMAIL"]}}</td>
+            <td>{{row["BLOODGROUP"]}}</td>
+            <td>{{row['PASSWORD']}}</td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
