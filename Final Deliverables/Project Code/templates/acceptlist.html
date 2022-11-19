@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="https://dashly-theme.com/assets/css/theme.bundle.css" id="stylesheetLTR">
+    <link rel="stylesheet" href="https://dashly-theme.com/assets/css/theme.rtl.bundle.css" id="stylesheetRTL">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>Accept</title>
+</head>
+<!-- LIST OF PEOPLE WHO ACCEPT THE REQUEST -->
+
+<body style="background-image:url('https://img.freepik.com/free-vector/copy-space-abstract-green-background-with-shiny-elements_23-2148827896.jpg?w=2000' );background-size: cover;">
+    <h2 style="font-size:55px;text-align: center;">Accept List</h2><br>
+
+    <!-- CONTENT SECTION -->
+    <div class="table-responsive">
+        <center>
+            <!-- TABLE SECTION -->
+            <table class="table align-middle table-edge table-hover table-nowrap mb-0" style="width: 20px; ">
+                <thead class="thead-light">
+                    <tr>
+
+                        <th>
+                            <a href="javascript: void(0);" class="text-muted list-sort" style="font-size: 30px;">
+                            Donor Name
+                        </a>
+                        </th>
+
+                        <th class="w-150px min-w-150px">
+                            <a href="javascript: void(0);" class="text-muted list-sort" data-sort="status" style="font-size: 30px;">
+                           Status
+                        </a>
+                        </th>
+                    </tr>
+                </thead>
+                <!-- ROW WILL BE DELETED AFTER DONATION -->
+                <tbody class="list">
+                    {% for row in users %}
+                    <tr>
+
+
+                        <td>{{row["USERNAME"]}}</td>
+
+                        <td><a href="/delete/{{row['USERNAME']}}">Received Successfully</a></td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </center>
+        <!--END OF TABLE SECTION-->
+    </div>
+    <!-- END OF CONTENT SECTION -->
+
+</body>
+
+</html>
